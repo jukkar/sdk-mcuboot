@@ -775,7 +775,7 @@ boot_image_check(struct boot_loader_state *state, struct image_header *hdr,
 
 #if defined(MCUBOOT_SWAP_USING_OFFSET) && defined(MCUBOOT_SERIAL_RECOVERY)
         FIH_CALL(bootutil_img_validate, fih_rc, state, hdr, fap, tmpbuf, BOOT_TMPBUF_SZ,
-                NULL, 0, NULL, 0);
+                NULL, 0, NULL);
 #else
         FIH_CALL(bootutil_img_validate, fih_rc, state, hdr, fap, tmpbuf, BOOT_TMPBUF_SZ,
                 NULL, 0, NULL);
